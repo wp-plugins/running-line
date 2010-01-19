@@ -34,14 +34,8 @@ function install_running_line(){
     $running_line_plugin_prefix = "rnngln_";
     $running_line_version = "1.1";
 
-    if(get_running_line_settings()===false){
-        set_default_running_line_settings();
-    }else{
-        $running_line_settings[$running_line_plugin_prefix."position"] = "bottom";
-
-        update_running_line_settings($running_line_settings);
-    }
-
+    set_default_running_line_settings();
+    
     add_option("running_line_version",$running_line_version);
 }
 
