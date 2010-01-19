@@ -31,11 +31,12 @@ $running_line_plugin_prefix = "rnngln_";
 $running_line_version = "1.1";
 
 function install_running_line(){
+    $running_line_plugin_prefix = "rnngln_";
     $running_line_version = "1.1";
 
     set_default_running_line_settings();
 
-    add_option("running_line_version",$running_line_version);
+    add_option($running_line_plugin_prefix."version",$running_line_version);
 }
 
 function set_running_line_settings($running_line_settings){
