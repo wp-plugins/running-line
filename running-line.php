@@ -36,7 +36,7 @@ function load_running_line(){
 
     if(get_running_line_settings()===false){
         set_default_running_line_settings();
-    }else{
+    }elseif(get_option($running_line_plugin_prefix."version")===false){
         $running_line_settings[$running_line_plugin_prefix."position"] = "bottom";
 
         update_running_line_settings($running_line_settings);
