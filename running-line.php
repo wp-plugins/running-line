@@ -30,7 +30,7 @@ $running_line_plugin_title = "Running Line";
 $running_line_plugin_prefix = "rnngln_";
 $running_line_version = "1.1";
 
-function install_running_line(){
+function load_running_line(){
     $running_line_plugin_prefix = "rnngln_";
     $running_line_version = "1.1";
 
@@ -332,7 +332,7 @@ function running_line(){
 <?php
 }
 
-register_activation_hook(__FILE__,'install_running_line');
+add_action('plugins_loaded','load_running_line');
 add_action('admin_menu', 'running_line_menu');
 add_action('wp_head', 'running_line_style');
 add_action('wp_footer', 'running_line');
