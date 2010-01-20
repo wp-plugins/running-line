@@ -40,13 +40,13 @@ function install_running_line(){
 }
 
 function set_running_line_settings($running_line_settings){
-    global $running_line_plugin_prefix;
+    $running_line_plugin_prefix = "rnngln_";
 
     add_option($running_line_plugin_prefix."settings",$running_line_settings);
 }
 
 function set_default_running_line_settings(){
-    global $running_line_plugin_prefix;
+    $running_line_plugin_prefix = "rnngln_";
 
     $running_line_category = get_option("default_category");
     $running_line_order = "rand";
