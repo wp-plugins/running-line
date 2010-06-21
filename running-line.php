@@ -3,7 +3,7 @@
 Plugin Name: Running Line
 Plugin URI: http://rubensargsyan.com/wordpress-plugin-running-line/
 Description: This plugin shows one of the posts from your chosen category by the running line. <a href="options-general.php?page=running-line.php">Settings</a>
-Version: 1.1
+Version: 1.2
 Author: Ruben Sargsyan
 Author URI: http://rubensargsyan.com/
 */
@@ -28,11 +28,11 @@ Author URI: http://rubensargsyan.com/
 $running_line_plugin_url = WP_PLUGIN_URL.'/'.str_replace(basename( __FILE__),"",plugin_basename(__FILE__));
 $running_line_plugin_title = "Running Line";
 $running_line_plugin_prefix = "rnngln_";
-$running_line_version = "1.1";
+$running_line_version = "1.2";
 
 function load_running_line(){
     $running_line_plugin_prefix = "rnngln_";
-    $running_line_version = "1.1";
+    $running_line_version = "1.2";
 
     if(get_running_line_settings()===false){
         set_default_running_line_settings();
@@ -318,6 +318,8 @@ function running_line(){
     $order = $running_line_settings[$running_line_plugin_prefix."order"];
 
     $marquee_string = "";
+    $id = "";
+    $home_url = get_settings('home');
 
     if($order == "desc"){
       $args = "numberposts=1&category=".$category."&order=desc";
@@ -328,10 +330,11 @@ function running_line(){
     $posts = get_posts($args);
     foreach($posts as $post){
         $marquee_string .= trim(strip_tags($post->post_content));
+        $id = $post->ID;
     }
 ?>
     <div id="running_line" class="running_line">
-      <marquee behavior="scroll" direction="<?php echo($running_line_settings[$running_line_plugin_prefix."direction"]); ?>" scrolldelay=<?php echo($running_line_settings[$running_line_plugin_prefix."scrolldelay"]); ?>>
+      <marquee behavior="scroll" direction="<?php echo($running_line_settings[$running_line_plugin_prefix."direction"]); ?>" scrolldelay=<?php echo($running_line_settings[$running_line_plugin_prefix."scrolldelay"]); ?> onclick="window.location ='<?php echo($home_url."/?p=".$id); ?>';" onmouseover="this.stop();" onmouseout="this.start();">
           <?php echo($marquee_string); ?>
       </marquee>
     </div>

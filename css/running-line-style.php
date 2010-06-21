@@ -34,6 +34,7 @@ $running_line_settings = get_option($running_line_plugin_prefix."settings");
     color: <?php echo($running_line_settings[$running_line_plugin_prefix."color"]); ?>;
     border-top: <?php echo($running_line_settings[$running_line_plugin_prefix."border_size"]); ?> solid <?php echo($running_line_settings[$running_line_plugin_prefix."border_color"]); ?>;
     border-bottom: <?php echo($running_line_settings[$running_line_plugin_prefix."border_size"]); ?> solid <?php echo($running_line_settings[$running_line_plugin_prefix."border_color"]); ?>;
+    cursor: pointer;
     }
 
 marquee{

@@ -3,7 +3,7 @@ Contributors: Ruben Sargsyan
 Donate link: http://rubensargsyan.com/donate/
 Tags: running line, ads, advertisment, advertise
 Requires at least: 2.6
-Tested up to: 2.9.1
+Tested up to: 3.0
 
 If you would like to have your running line on your Wordpress blog, so this plugin is just for you!
 
@@ -42,9 +42,12 @@ Make sure that the code `<?php wp_footer(); ?>` is included in your theme's `foo
 
 == Changelog ==
 
+= 1.2 =
+* Added new events on running line: running line is stopped when the mouse moved over it and starts when the mouse is out of the running line, if you click on the running line it moves to the post page.
+
 = 1.1 =
-* Added new option "select the position of the running line"
-* Fixed some bugs
+* Added new option "select the position of the running line".
+* Fixed some bugs.
 
 = 1.0 =
 * First release.
