@@ -11,7 +11,7 @@ If you would like to have your running line on your Wordpress blog, so this plug
 
 If you would like to have your running line on your Wordpress blog, so this plugin is just for you! It gives you the possibility to show one of the posts from your chosen category by the running line. So download and enjoy!
 
-In administration interface you can do the following settings:
+= In administration interface you can do the following settings: =
 1. Select order type of chosen category posts.
 2. Select the direction of the running line.
 3. Select the position of the running line.
