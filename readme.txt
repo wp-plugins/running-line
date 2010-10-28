@@ -24,7 +24,7 @@ In administration interface you can do the following settings:
 10. Set running line background color.
 11. Set running line padding.
 
-[Plugin Homepage](http://rubensargsyan.com/wordpress-plugin-running-line).
+[Plugin Homepage](http://rubensargsyan.com/wordpress-plugin-running-line)
 
 == Installation ==
 
